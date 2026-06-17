@@ -10,60 +10,86 @@
 <style>
 *{box-sizing:border-box}
 
+:root{
+--green:#065f43;
+--dark:#070707;
+--lime:#d8ff00;
+--soft:#f4f6f2;
+--text:#111;
+}
+
 body{
 font-family:Arial,sans-serif;
 margin:0;
 padding:0;
 line-height:1.6;
-color:#111;
+color:var(--text);
 background:#fff;
 }
 
 img{
 max-width:100%;
 display:block;
-border-radius:22px;
+border-radius:24px;
+}
+
+a{
+transition:.25s ease;
 }
 
 .hero{
-min-height:90vh;
+min-height:92vh;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.45)),
+linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.50)),
 url("Hero.png") center/cover no-repeat;
 color:white;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
+position:relative;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+bottom:-1px;
+left:0;
+width:100%;
+height:90px;
+background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);
 }
 
 .hero-content{
-max-width:900px;
+max-width:980px;
+position:relative;
+z-index:1;
 }
 
 .hero h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:24px;
+font-size:56px;
+line-height:1.05;
+margin:0 0 22px;
+letter-spacing:-1.5px;
 }
 
 .hero p{
-font-size:24px;
-max-width:760px;
+font-size:23px;
+max-width:720px;
 margin:0 auto 18px;
 }
 
 .tagline{
 font-size:22px;
-letter-spacing:3px;
+letter-spacing:4px;
 font-weight:bold;
-color:#d8ff00;
-margin-top:20px;
+color:var(--lime);
+margin-top:18px;
 }
 
 .btn-group{
-margin-top:36px;
+margin-top:34px;
 display:flex;
 gap:16px;
 justify-content:center;
@@ -71,52 +97,98 @@ flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:16px 30px;
-background:#d8ff00;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 32px;
+min-height:56px;
+background:var(--lime);
 color:#000;
 text-decoration:none;
 border-radius:999px;
-font-weight:bold;
+font-weight:800;
+box-shadow:0 14px 30px rgba(216,255,0,.22);
+}
+
+.btn:hover{
+transform:translateY(-2px);
 }
 
 .btn-secondary{
-background:transparent;
+background:rgba(255,255,255,.08);
 color:white;
-border:1px solid rgba(255,255,255,.7);
+border:1px solid rgba(255,255,255,.75);
+box-shadow:none;
+backdrop-filter:blur(8px);
 }
 
 .section{
-padding:80px 20px;
+padding:86px 20px;
+}
+
+.section-inner{
 max-width:1120px;
 margin:auto;
+}
+
+.section-soft{
+background:var(--soft);
+position:relative;
+}
+
+.section-dark{
+background:var(--dark);
+color:white;
+position:relative;
+}
+
+.section-dark h2{
+color:var(--lime);
 }
 
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:48px;
+gap:56px;
 align-items:center;
 }
 
+.image-card{
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 24px 70px rgba(0,0,0,.14);
+}
+
 .section h2{
-font-size:40px;
-line-height:1.15;
+font-size:42px;
+line-height:1.1;
 margin:0 0 20px;
-color:#0c5c43;
+color:var(--green);
+letter-spacing:-.8px;
 }
 
 .section h3{
 font-size:24px;
-margin-bottom:10px;
+margin:0 0 12px;
 }
 
 .section p{
 font-size:18px;
+margin:0 0 18px;
+}
+
+.kicker{
+display:inline-block;
+color:var(--green);
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
+font-size:13px;
+margin-bottom:14px;
 }
 
 .proof{
-background:#111;
+background:var(--dark);
 color:white;
 padding:34px 20px;
 }
@@ -126,65 +198,103 @@ max-width:1120px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(5,1fr);
-gap:16px;
-text-align:center;
+gap:14px;
 }
 
 .proof-item{
-border:1px solid rgba(255,255,255,.18);
-border-radius:16px;
-padding:20px 14px;
-font-weight:bold;
+border:1px solid rgba(255,255,255,.16);
+border-radius:18px;
+padding:18px 14px;
+font-weight:800;
+text-align:center;
+background:rgba(255,255,255,.035);
+min-height:82px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.why{
+max-width:900px;
+}
+
+.check-list p{
+font-size:20px;
+font-weight:700;
+margin-bottom:18px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:22px;
+gap:18px;
 margin-top:28px;
 }
 
 .card{
-background:#f6f6f6;
-border-radius:18px;
+background:white;
+border-radius:22px;
 padding:26px;
+box-shadow:0 12px 38px rgba(0,0,0,.06);
+border:1px solid rgba(0,0,0,.04);
 }
 
-.dark-section{
-background:#0b0b0b;
-color:white;
+.card h3{
+font-size:23px;
+line-height:1.2;
 }
 
-.dark-section h2{
-color:#d8ff00;
+.card p{
+font-size:16.5px;
+margin-bottom:0;
 }
 
 .contact-card{
 background:#111;
 color:white;
-border-radius:24px;
-padding:36px;
+border-radius:28px;
+padding:38px;
+box-shadow:0 24px 70px rgba(0,0,0,.28);
 }
 
 .contact-card a{
-color:#d8ff00;
+color:var(--lime);
 font-weight:bold;
 }
 
-footer{
-background:#050505;
-color:white;
-text-align:center;
-padding:34px 20px;
+.contact-card .btn{
+color:#000;
+margin-top:14px;
+width:auto;
 }
 
-@media(max-width:800px){
-.hero h1{font-size:40px}
+footer{
+background:#030303;
+color:white;
+text-align:center;
+padding:36px 20px;
+}
+
+footer p{
+margin:6px 0;
+}
+
+@media(max-width:900px){
+.hero h1{font-size:42px}
 .hero p{font-size:19px}
-.grid{grid-template-columns:1fr}
-.proof-grid{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr;gap:34px}
+.proof-grid{grid-template-columns:1fr 1fr}
 .cards{grid-template-columns:1fr}
-.section{padding:58px 20px}
+.section{padding:64px 20px}
+}
+
+@media(max-width:560px){
+.hero{min-height:88vh}
+.hero h1{font-size:34px}
+.tagline{font-size:17px;letter-spacing:2.5px}
+.proof-grid{grid-template-columns:1fr}
+.btn{width:100%}
+.section h2{font-size:34px}
 }
 </style>
 </head>
@@ -193,23 +303,24 @@ padding:34px 20px;
 
 <section class="hero">
 <div class="hero-content">
-<h1>Learn and Play Padel in Ho Chi Minh City</h1>
+<h1>Learn and Play Padel<br>in Ho Chi Minh City</h1>
 <p>Private coaching and beginner-friendly lessons<br>for expats and professionals.</p>
 <div class="tagline">Play. Connect. Grow.</div>
 
 <div class="btn-group">
 <a class="btn" href="https://forms.gle/7orM9uTTQXogQRnm8" target="_blank">Book Your First Lesson</a>
-<a class="btn btn-secondary" href="https://wa.me/84899470903" target="_blank">WhatsApp Us</a>
+<a class="btn btn-secondary" href="https://wa.me/84899470903" target="_blank">Chat on WhatsApp</a>
 </div>
 </div>
 </section>
 
 <section class="section">
-<div class="grid">
-<div>
+<div class="section-inner grid">
+<div class="image-card">
 <img src="Coach.png" alt="Joey Pham, Padel HCMC coach">
 </div>
 <div>
+<span class="kicker">Certified Coach</span>
 <h2>Meet Your Coach</h2>
 <h3>Joey Pham</h3>
 <p><strong>Certified Coach with 10+ Years of Coaching Experience</strong></p>
@@ -229,15 +340,18 @@ padding:34px 20px;
 </div>
 </section>
 
-<section class="section">
+<section class="section section-soft">
+<div class="section-inner why">
+<span class="kicker">Why Padel HCMC</span>
 <h2>Why Learn With Us?</h2>
 <p>Whether you've never picked up a racket before or you're transitioning from tennis or pickleball, we make padel easy to learn and fun to play.</p>
 <p>Our coaching focuses on practical skills, confidence building, and helping you join the growing padel community in Ho Chi Minh City.</p>
+</div>
 </section>
 
 <section class="section">
-<div class="grid">
-<div>
+<div class="section-inner grid">
+<div class="check-list">
 <h2>Who Is It For?</h2>
 <p>✓ Complete Beginners</p>
 <p>✓ Expats Living in Ho Chi Minh City</p>
@@ -245,15 +359,15 @@ padding:34px 20px;
 <p>✓ Busy Professionals</p>
 <p>✓ Corporate Team Building Groups</p>
 </div>
-<div>
+<div class="image-card">
 <img src="Social.png" alt="Padel HCMC social community">
 </div>
 </div>
 </section>
 
-<section class="section">
-<div class="grid">
-<div>
+<section class="section section-soft">
+<div class="section-inner grid">
+<div class="image-card">
 <img src="Lesson.png" alt="Padel lesson in Ho Chi Minh City">
 </div>
 <div>
@@ -284,8 +398,8 @@ padding:34px 20px;
 </div>
 </section>
 
-<section class="section dark-section">
-<div class="grid">
+<section class="section section-dark">
+<div class="section-inner grid">
 <div>
 <h2>Contact</h2>
 <div class="contact-card">
@@ -302,7 +416,7 @@ English & Vietnamese</p>
 <a class="btn" href="https://forms.gle/7orM9uTTQXogQRnm8" target="_blank">Book Your First Lesson</a>
 </div>
 </div>
-<div>
+<div class="image-card">
 <img src="CTA.png" alt="Padel players celebrating after a match">
 </div>
 </div>
