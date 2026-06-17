@@ -3,134 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Padel HCMC | Learn Padel in Ho Chi Minh City</title>
+
+<title>Padel HCMC | Padel Lessons & Coaching in Ho Chi Minh City</title>
+<meta name="description" content="Learn padel in Ho Chi Minh City with certified coach Joey Pham. Beginner-friendly private coaching, group lessons and social play sessions in Thao Dien and An Phu.">
 
 <style>
+*{box-sizing:border-box}
+
 body{
 font-family:Arial,sans-serif;
 margin:0;
 padding:0;
 line-height:1.6;
-color:#222;
+color:#111;
+background:#fff;
+}
+
+img{
+max-width:100%;
+display:block;
+border-radius:22px;
 }
 
 .hero{
-background:#0c5c43;
+min-height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.45)),
+url("Hero.png") center/cover no-repeat;
 color:white;
-padding:80px 20px;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+padding:80px 20px;
+}
+
+.hero-content{
+max-width:900px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:20px;
+font-size:58px;
+line-height:1.1;
+margin-bottom:24px;
 }
 
 .hero p{
+font-size:24px;
+max-width:760px;
+margin:0 auto 18px;
+}
+
+.tagline{
 font-size:22px;
-max-width:700px;
-margin:auto;
+letter-spacing:3px;
+font-weight:bold;
+color:#d8ff00;
+margin-top:20px;
+}
+
+.btn-group{
+margin-top:36px;
+display:flex;
+gap:16px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#f4b400;
+padding:16px 30px;
+background:#d8ff00;
 color:#000;
 text-decoration:none;
-border-radius:8px;
+border-radius:999px;
 font-weight:bold;
 }
 
+.btn-secondary{
+background:transparent;
+color:white;
+border:1px solid rgba(255,255,255,.7);
+}
+
 .section{
-padding:60px 20px;
-max-width:1000px;
+padding:80px 20px;
+max-width:1120px;
 margin:auto;
 }
 
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:48px;
+align-items:center;
+}
+
 .section h2{
+font-size:40px;
+line-height:1.15;
+margin:0 0 20px;
 color:#0c5c43;
 }
 
-footer{
+.section h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.section p{
+font-size:18px;
+}
+
+.proof{
 background:#111;
 color:white;
+padding:34px 20px;
+}
+
+.proof-grid{
+max-width:1120px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:16px;
 text-align:center;
-padding:30px;
+}
+
+.proof-item{
+border:1px solid rgba(255,255,255,.18);
+border-radius:16px;
+padding:20px 14px;
+font-weight:bold;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+margin-top:28px;
+}
+
+.card{
+background:#f6f6f6;
+border-radius:18px;
+padding:26px;
+}
+
+.dark-section{
+background:#0b0b0b;
+color:white;
+}
+
+.dark-section h2{
+color:#d8ff00;
+}
+
+.contact-card{
+background:#111;
+color:white;
+border-radius:24px;
+padding:36px;
+}
+
+.contact-card a{
+color:#d8ff00;
+font-weight:bold;
+}
+
+footer{
+background:#050505;
+color:white;
+text-align:center;
+padding:34px 20px;
+}
+
+@media(max-width:800px){
+.hero h1{font-size:40px}
+.hero p{font-size:19px}
+.grid{grid-template-columns:1fr}
+.proof-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+.section{padding:58px 20px}
 }
 </style>
-
 </head>
+
 <body>
 
 <section class="hero">
-<h1>Learn Padel in Ho Chi Minh City</h1>
-<p>
-Private coaching and beginner-friendly padel lessons for expats living in HCMC.
-</p>
+<div class="hero-content">
+<h1>Learn and Play Padel in Ho Chi Minh City</h1>
+<p>Private coaching and beginner-friendly lessons<br>for expats and professionals.</p>
+<div class="tagline">Play. Connect. Grow.</div>
 
-<a class="btn"
-href="https://wa.me/84901234567">
-Book Your First Lesson
-</a>
+<div class="btn-group">
+<a class="btn" href="https://forms.gle/7orM9uTTQXogQRnm8" target="_blank">Book Your First Lesson</a>
+<a class="btn btn-secondary" href="https://wa.me/84899470903" target="_blank">WhatsApp Us</a>
+</div>
+</div>
 </section>
 
 <section class="section">
-<h2>Why Padel HCMC?</h2>
+<div class="grid">
+<div>
+<img src="Coach.png" alt="Joey Pham, Padel HCMC coach">
+</div>
+<div>
+<h2>Meet Your Coach</h2>
+<h3>Joey Pham</h3>
+<p><strong>Certified Coach with 10+ Years of Coaching Experience</strong></p>
+<p>From tennis and golf to pickleball and now padel, Joey helps beginners learn faster, play smarter, and enjoy the game from day one.</p>
+<p>Lessons available in English and Vietnamese.</p>
+</div>
+</div>
+</section>
 
-<p>
-Padel is one of the fastest-growing sports in the world.
-Easy to learn, highly social, and perfect for busy professionals.
-</p>
-
-<p>
-We help expats in Ho Chi Minh City start playing quickly through private coaching and small-group lessons.
-</p>
+<section class="proof">
+<div class="proof-grid">
+<div class="proof-item">✓ Beginner Friendly</div>
+<div class="proof-item">✓ English Speaking Coach</div>
+<div class="proof-item">✓ Flexible Schedule</div>
+<div class="proof-item">✓ Private & Group Lessons</div>
+<div class="proof-item">✓ Social Play Every Day</div>
+</div>
 </section>
 
 <section class="section">
+<h2>Why Learn With Us?</h2>
+<p>Whether you've never picked up a racket before or you're transitioning from tennis or pickleball, we make padel easy to learn and fun to play.</p>
+<p>Our coaching focuses on practical skills, confidence building, and helping you join the growing padel community in Ho Chi Minh City.</p>
+</section>
+
+<section class="section">
+<div class="grid">
+<div>
 <h2>Who Is It For?</h2>
-
-<ul>
-<li>Complete beginners</li>
-<li>Expats living in HCMC</li>
-<li>Tennis players switching to padel</li>
-<li>Professionals looking for a fun activity</li>
-<li>Corporate team-building groups</li>
-</ul>
-
+<p>✓ Complete Beginners</p>
+<p>✓ Expats Living in Ho Chi Minh City</p>
+<p>✓ Tennis Players Switching to Padel</p>
+<p>✓ Busy Professionals</p>
+<p>✓ Corporate Team Building Groups</p>
+</div>
+<div>
+<img src="Social.png" alt="Padel HCMC social community">
+</div>
+</div>
 </section>
 
 <section class="section">
+<div class="grid">
+<div>
+<img src="Lesson.png" alt="Padel lesson in Ho Chi Minh City">
+</div>
+<div>
 <h2>Programs</h2>
 
-<h3>Beginner Course</h3>
-<p>Learn rules, technique, positioning and match play.</p>
+<div class="cards">
+<div class="card">
+<h3>Beginner Starter Program</h3>
+<p>Learn the fundamentals of padel including rules, positioning, shot selection and match play.</p>
+</div>
 
+<div class="card">
 <h3>Private Coaching</h3>
-<p>1-on-1 lessons customized to your level.</p>
+<p>One-on-one lessons customized to your level and goals.</p>
+</div>
 
+<div class="card">
 <h3>Group Lessons</h3>
-<p>Meet other expats and learn together.</p>
+<p>Train with friends, colleagues or fellow beginners in a fun and social environment.</p>
+</div>
 
+<div class="card">
+<h3>Social Play Sessions</h3>
+<p>Join friendly games and meet new players in the growing HCMC padel community.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<section class="section">
+<section class="section dark-section">
+<div class="grid">
+<div>
 <h2>Contact</h2>
+<div class="contact-card">
+<p><strong>WhatsApp:</strong><br>
+<a href="https://wa.me/84899470903" target="_blank">+84 899 470 903</a></p>
 
-<p>
-WhatsApp: +84 XXX XXX XXX
-</p>
+<p><strong>Location:</strong><br>
+Thao Dien & An Phu<br>
+District 2, Ho Chi Minh City</p>
 
-<p>
-Ho Chi Minh City, Vietnam
-</p>
+<p><strong>Languages:</strong><br>
+English & Vietnamese</p>
 
+<a class="btn" href="https://forms.gle/7orM9uTTQXogQRnm8" target="_blank">Book Your First Lesson</a>
+</div>
+</div>
+<div>
+<img src="CTA.png" alt="Padel players celebrating after a match">
+</div>
+</div>
 </section>
 
 <footer>
-© 2026 Padel HCMC
+<p>© 2026 Padel HCMC</p>
+<p>Play. Connect. Grow.</p>
 </footer>
 
 </body>
